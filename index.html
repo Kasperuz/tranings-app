@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="inout_form" method="post">
+      <label for="övning_text">Övning:</label>
+      <select name="övning_dropdown" id="övning">
+        <option value="1">Övning 1</option>
+        <option value="2">Övning 2</option>
+        <option value="3">Övning 3</option>
+      </select>
+
+      <label for="vikt_text">Vikt:</label>
+      <input type="number" name="vikt_input" required />
+      <input id="datum_input" type="date" name="datum" required />
+
+      <button id="btn" type="submit">Submit</button>
+    </form>
+    <table
+      id="statistics_table"
+      class="statistics_table"
+      style="border: 1"
+    ></table>
+
+    <script src="index.js"></script>
+  </body>
+</html>
