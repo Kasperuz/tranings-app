@@ -6,25 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-    <form id="inout_form" method="post">
-      <label for="övning_text">Övning:</label>
-      <select name="övning_dropdown" id="övning">
-        <option value="1">Övning 1</option>
-        <option value="2">Övning 2</option>
-        <option value="3">Övning 3</option>
-      </select>
-
-      <label for="vikt_text">Vikt:</label>
-      <input type="number" name="vikt_input" required />
-      <input id="datum_input" type="date" name="datum" required />
-
-      <button id="btn" type="submit">Submit</button>
+    <form id="input-form">
+      <div id="övningar"></div>
+      <button onclick="sparaTräningspass()">Klar</button>
     </form>
-    <table
-      id="statistics_table"
-      class="statistics_table"
-      style="border: 1"
-    ></table>
+
+    <input type="text" id="nyÖvningInput" />
+    <button onclick="nyÖvning()">Lägg till ny övning</button>
+    <br />
+
+    <button onclick="exporteraData()">Exortera data</button>
+    <br />
+    <label for="uploadButton">Importera data</label>
+    <input id="uploadButton" type="file" onchange="importeraData(event)" />
 
     <script src="index.js"></script>
   </body>
