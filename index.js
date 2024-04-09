@@ -56,28 +56,33 @@ function nyÖvning() {
 }
 
 function skrivUtÖvning(namn,vikt) {
-  let övningsNod = document.createElement("div")
+  let övningsNod = document.createElement("tr")
   övningsNod.name = namn
 
+  let inputTdNod = document.createElement("td")
   let inputNod = document.createElement("input")
   inputNod.id = 'övning-' + document.getElementById("övningar").children.length + '-input'
   inputNod.type = "number"
   inputNod.name = "vikt-input"
   if (vikt) {
-  inputNod.value = vikt
-}
+    inputNod.value = vikt
+  }
   inputNod.onchange = function() {inputChange(event)}
+  inputTdNod.appendChild(inputNod)
 
+  let labelTdNod = document.createElement("td")
   let labelNod = document.createElement("label")
   labelNod.for = 'övning-' + document.getElementById("övningar").children.length + '-input'
   labelNod.innerHTML = namn
+  labelTdNod.appendChild(labelNod)
 
   let checkboxNod = document.createElement("input")
   checkboxNod.type = "checkbox"
+  inputTdNod.appendChild(checkboxNod)
 
-  övningsNod.appendChild(labelNod)
-  övningsNod.appendChild(inputNod)
-  övningsNod.appendChild(checkboxNod)
+  övningsNod.appendChild(labelTdNod)
+  övningsNod.appendChild(inputTdNod)
+
   document.getElementById("övningar").appendChild(övningsNod)
 }
 
