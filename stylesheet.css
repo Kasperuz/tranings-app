@@ -1,0 +1,128 @@
+label {
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+
+div.klar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4d4d4d;
+  height: 10vh;
+}
+button.klar-button {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 90%;
+  position: fixed;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
+label.klar-button {
+  color: white;
+  font-size: 36px;
+}
+
+
+div.ny-button {
+  display: flex;
+}
+
+input.ny-button {
+  flex-grow: 1;
+  border: none;
+  font-size: 36px;
+  width: 180px;
+}
+
+img.ny-button {
+  width: 37px;
+}
+
+button.ny-button {
+  background: none;
+  border: none;
+}
+
+
+div.data-div {
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  top: calc(85vh - 110px);
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+}
+div.importera-button {
+  height: 110px;
+}
+input.importera-button {
+  display: none;
+}
+img.importera-button {
+  width: 100px;
+}
+
+
+button.exportera-button {
+  background: none;
+  border: none;
+  height: 110px;
+}
+
+img.exportera-button {
+  width: 100px;
+}
+
+
+
+
+div.övnings-nod {
+  display: flex;
+  margin-bottom: 5px;
+
+}
+
+
+.vikt-input {
+  font-size: 20px;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-align: right;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.övings-label {
+  flex-grow: 1;
+  font-size: 30px;
+  margin-left: 3px;
+  
+}
+
+input.övining-checkbox {
+  display: none;
+}
+label.övining-checkbox {
+  width: 37px;
+  height: 37px;
+  margin-right: 4px;
+  position: relative;
+
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  background-image: url(images/checkbox0.svg);
+}
+input.övining-checkbox:checked + label.övining-checkbox {
+  background-image: url(images/checkbox1.svg);
+}

@@ -42,6 +42,9 @@ function inputChange(event) {
 
 function nyÖvning() {
   let namn = document.getElementById("nyÖvningInput").value
+  if (namn == "") {
+    return
+  }
   if (localStorage.getItem("övningar")) {
     let data = JSON.parse(localStorage.getItem("övningar"));
     data[namn] = null
@@ -56,32 +59,43 @@ function nyÖvning() {
 }
 
 function skrivUtÖvning(namn,vikt) {
-  let övningsNod = document.createElement("tr")
+  let övningsNod = document.createElement("div")
+  övningsNod.className = "övnings-nod"
   övningsNod.name = namn
 
-  let inputTdNod = document.createElement("td")
+//  let inputTdNod = document.createElement("td")
   let inputNod = document.createElement("input")
   inputNod.id = 'övning-' + document.getElementById("övningar").children.length + '-input'
   inputNod.type = "number"
   inputNod.name = "vikt-input"
+  inputNod.className = "vikt-input"
+  inputNod.placeholder = "Vikt"
   if (vikt) {
     inputNod.value = vikt
   }
   inputNod.onchange = function() {inputChange(event)}
-  inputTdNod.appendChild(inputNod)
+//  inputTdNod.appendChild(inputNod)
 
-  let labelTdNod = document.createElement("td")
+//  let labelTdNod = document.createElement("td")
   let labelNod = document.createElement("label")
   labelNod.for = 'övning-' + document.getElementById("övningar").children.length + '-input'
   labelNod.innerHTML = namn
-  labelTdNod.appendChild(labelNod)
+  labelNod.className = "övings-label"
+//  labelTdNod.appendChild(labelNod)
 
   let checkboxNod = document.createElement("input")
   checkboxNod.type = "checkbox"
-  inputTdNod.appendChild(checkboxNod)
+  checkboxNod.className = "övining-checkbox"
+  checkboxNod.id = 'övning-' + document.getElementById("övningar").children.length + '-checkbox'
+  let checkBoxLabel = document.createElement("label")
+  checkBoxLabel.className = "övining-checkbox"
+  checkBoxLabel.htmlFor = checkboxNod.id
 
-  övningsNod.appendChild(labelTdNod)
-  övningsNod.appendChild(inputTdNod)
+  
+  övningsNod.appendChild(labelNod)
+  övningsNod.appendChild(inputNod)
+  övningsNod.appendChild(checkboxNod)
+  övningsNod.appendChild(checkBoxLabel)
 
   document.getElementById("övningar").appendChild(övningsNod)
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="961.85901mm"
+   height="158.06801mm"
+   viewBox="0 0 961.85901 158.06801"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect13"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,1,1,0,36.735308,0,1 @ F,0,0,1,0,36.735308,0,1 @ F,0,1,1,0,36.735308,0,1 @ F,0,1,1,0,36.735308,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <rect
+       x="303.75687"
+       y="1264.7332"
+       width="3396.554"
+       height="441.82816"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Lager 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2"
+       inkscape:label="Klar knapp"
+       transform="matrix(1.0000001,0,0,0.99936706,-55.351182,-315.25482)">
+      <path
+         id="rect1"
+         d="M 92.262984,315.63098 H 980.29789 a 36.735308,36.735308 45 0 1 36.73531,36.73531 l 0,84.3449 A 36.735308,36.735308 135 0 1 980.29789,473.4465 H 92.262984 A 36.735308,36.735308 45 0 1 55.527676,436.71119 v -84.3449 a 36.735308,36.735308 135 0 1 36.735308,-36.73531 z"
+         style="fill:#4d4d4d;stroke:#000000;stroke-width:0.352999"
+         inkscape:path-effect="#path-effect13"
+         inkscape:original-d="M 55.527676,315.63098 H 1017.0332 V 473.4465 H 55.527676 Z" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.26458333,0,0,0.26458333,-2.999508,4.6496838)"
+         id="text1"
+         style="font-size:333.439px;text-align:center;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#f9f9f9;stroke:#000000;stroke-width:1.33417"><tspan
+           x="374.1583"
+           y="1568.9389"
+           id="tspan4"><tspan
+             dx="0 0 0 0 0 0 0 -0.00010681152 0 0 0 0 0 0.00016784668 -0.00019836426 0.00016784668 0 -0.00019836426"
+             id="tspan2">Spara Träningspass</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

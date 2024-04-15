@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="239.33mm"
+   height="260.461mm"
+   viewBox="0 0 239.33 260.461"
+   version="1.1"
+   id="svg1"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showguides="false" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="546.29889,1905.3109"
+       end_point="546.29889,2147.7778"
+       center_point="546.29889,2026.5443"
+       id="path-effect4"
+       is_visible="true"
+       lpeversion="1.2"
+       lpesatellites=""
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false"
+       link_styles="false" />
+    <rect
+       x="611.42743"
+       y="7940.667"
+       width="763.2981"
+       height="193.28996"
+       id="rect9" />
+  </defs>
+  <g
+     inkscape:label="Lager 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3"
+       inkscape:label="Exportera"
+       transform="translate(-426.63367,-1954.743)">
+      <path
+         id="path1"
+         style="fill-opacity:0;stroke:#000000;stroke-width:13.367"
+         d="M 546.29889,2147.7778 H 433.31717 v -103.8252 h 62.512 m 50.46972,103.8252 h 112.98172 v -103.8252 h -62.512"
+         sodipodi:nodetypes="cccc"
+         inkscape:path-effect="#path-effect4"
+         inkscape:original-d="M 546.29889,2147.7778 H 433.31717 v -103.8252 h 62.512" />
+      <path
+         style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:13.367;stroke-dasharray:none;stroke-opacity:1"
+         d="m 543.85102,2115.139 v -150.9441 m -49.8739,49.8739 49.8739,-49.8739 48.9479,48.9479 v 0"
+         id="path2"
+         sodipodi:nodetypes="cccccc" />
+      <text
+         xml:space="preserve"
+         id="text6"
+         style="font-size:146.667px;text-align:center;white-space:pre;shape-inside:url(#rect9);display:inline;fill:#000000;stroke:#000000;stroke-width:1.33417"
+         transform="matrix(0.26458333,0,0,0.26458333,281.83544,70.848708)"><tspan
+           x="635.18146"
+           y="8074.4767"
+           id="tspan2">Exportera</tspan></text>
+    </g>
+  </g>
+</svg>

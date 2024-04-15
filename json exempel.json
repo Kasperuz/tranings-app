@@ -1,0 +1,21 @@
+[[{"datum": 2132137,
+  "önvingar": [
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]},
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]},
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]}]},
+
+ {"datum": 2132146,
+  "önvingar": [
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]},
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]},
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]}]},
+	
+ {"datum": 2132158,
+  "önvingar": [
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]},
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]},
+	{"namn": "pulley", "maskin": 12, "vikt": [40,40,50]}]}
+],
+
+
+{"pulley":24,"chest press":56}]
