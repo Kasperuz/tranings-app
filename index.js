@@ -151,4 +151,30 @@ function importeraData(data) {
     
 }
 
+
+function sidemenu() {
+  const button = document.getElementById("menu-button")
+  const dropdown = document.getElementById("dropdown-menu")
+  const handleClick = (event) => {
+    if (!button.contains(event.target)) {
+      hideSidemenu(dropdown)
+    }
+  };
+  if (dropdown.classList.contains("opened")) {
+    hideSidemenu(dropdown,handleClick)
+  }
+  else {
+    dropdown.classList.add("opened")
+    document.addEventListener('click', handleClick);
+  }
+  console.log(dropdown.classList)
+  
+}
+
+function hideSidemenu(dropdown,clickHandler) {
+  dropdown.classList.remove("opened")
+  document.removeEventListener('click',clickHandler);
+
+}
+
 window.onload = uppdateraVikter();

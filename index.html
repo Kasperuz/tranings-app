@@ -6,10 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css" />
 
-    <link rel="icon" href="data:," />
+    <link rel="icon" href="#" />
     <!-- Providing a empty file as the favicon so that the browser does not give a error -->
   </head>
   <body>
+    <div class="heading">
+      <button class="heading dropdown" id="menu-button" onclick="sidemenu()">
+        <img src="images/meny.svg" alt="meny" class="heading" />
+        <div id="dropdown-menu" class="dropdown"></div>
+      </button>
+      <h1 class="heading">Tränings app</h1>
+    </div>
+
     <div name="Ny övning button" class="ny-button">
       <input
         type="text"
