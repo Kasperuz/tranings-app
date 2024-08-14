@@ -5,7 +5,6 @@ window.onload = function () {
     return
   }
   for (let i=0;i<övningar.length;i++) {
-    console.log(i)
     skrivUtÖvning(övningar[i])
   }
 };
@@ -38,12 +37,12 @@ function nyÖvning() {
   if (namn == "") {
     return
   }
-  document.getElementById("main-screen-link").contentWindow.postMessage([true,namn],"*") // True = add, False = remove
+  document.getElementById("main-screen-link").contentWindow.postMessage([1,namn],"*") // 1 = add, 2 = remove, 3 = set
   skrivUtÖvning(namn,null)
 }
 
 function taBortÖvning(övning) {
-  document.getElementById("main-screen-link").contentWindow.postMessage([false,övning.children[0].innerHTML],"*") // True = add, False = remove
+  document.getElementById("main-screen-link").contentWindow.postMessage([2,övning.children[0].innerHTML],"*") // 1 = add, 2 = remove, 3 = set
   övning.remove()
 }
 
@@ -62,7 +61,7 @@ function sidemenu() {
     dropdown.classList.add("opened")
     document.addEventListener('click', handleClick);
   }
-  console.log(dropdown.classList)
+
   
 }
 
@@ -79,8 +78,8 @@ function hemMenu() {
   window.location.href = 'index.html'
 }
 
-function exporteraData() {
-  let data = [JSON.stringify([localStorage.getItem("övningar"),localStorage.getItem("träningspass")])]
+function exporteraData() {/*
+  let data = [JSON.stringify([JSON.parse(document.getElementById("main-screen-link").contentWindow.localStorage.getItem("övningar")),JSON.parse(document.getElementById("main-screen-link").contentWindow.localStorage.getItem("träningspass"))])]
   console.log(data)
   let file = new File(data,"träningsapp-export.json")
   const link = document.createElement('a')
@@ -92,20 +91,21 @@ function exporteraData() {
   link.click()
 
   document.body.removeChild(link)
-  window.URL.revokeObjectURL(url)
+  window.URL.revokeObjectURL(url)*/
 }
 
-function importeraData(data) {
+function importeraData(data) {/*
   var file = data.target.files[0];
       var reader = new FileReader(); // create a FileReader
 
     reader.onload = function(e) {
         var contents = e.target.result; // get the file contents
-        localStorage.setItem("övningar",JSON.parse(contents)[0]); // log the contents
-        localStorage.setItem("träningspass",JSON.parse(contents)[1]); // log the contents
-        uppdateraVikter()
-    };
+        
+        document.getElementById("main-screen-link").contentWindow.postMessage([3,JSON.parse(contents)],"*")
+        console.log(JSON.parse(contents)[0])
+        window.location.href = 'övningar.html?övningar='+JSON.stringify(Object.keys(JSON.parse(JSON.parse(contents)[0])))
+      };
 
     reader.readAsText(file); // read the file as text
-    
+    */
 }

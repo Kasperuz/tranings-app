@@ -121,8 +121,22 @@ function taBortÖvningar() {
 }
 
 function exporteraData() {
-  let data = [JSON.stringify([localStorage.getItem("övningar"),localStorage.getItem("träningspass")])]
-  console.log(data)
+  let öviningarTemp = localStorage.getItem("övningar")
+  if (öviningarTemp == null) {
+    öviningarTemp = {}
+  }
+  else {
+    öviningarTemp = JSON.parse(öviningarTemp)
+  }
+  let träningspassTemp = localStorage.getItem("träningspass")
+  if (träningspassTemp == null) {
+    träningspassTemp = []
+  }
+  else {
+    träningspassTemp = JSON.parse(träningspassTemp)
+  }
+  let data = [JSON.stringify([övningar,träningspassTemp])]
+  console.log([öviningarTemp,träningspassTemp])
   let file = new File(data,"träningsapp-export.json")
   const link = document.createElement('a')
   const url = URL.createObjectURL(file)
@@ -142,8 +156,9 @@ function importeraData(data) {
 
     reader.onload = function(e) {
         var contents = e.target.result; // get the file contents
-        localStorage.setItem("övningar",JSON.parse(contents)[0]); // log the contents
-        localStorage.setItem("träningspass",JSON.parse(contents)[1]); // log the contents
+        console.log(JSON.parse(contents))
+        localStorage.setItem("övningar",JSON.stringify(JSON.parse(contents)[0])); // log the contents
+        localStorage.setItem("träningspass",JSON.stringify(JSON.parse(contents)[1])); // log the contents
         uppdateraVikter()
     };
 
@@ -192,7 +207,7 @@ function hemMenu() {
 window.onload = uppdateraVikter();
 
 addEventListener("message", (event) => {
-  if (event.data[0]) {
+  if (event.data[0] == 1) {
     if (localStorage.getItem("övningar")) {
       let data = JSON.parse(localStorage.getItem("övningar"));
       console.log(data)
@@ -205,9 +220,14 @@ addEventListener("message", (event) => {
       localStorage.setItem("övningar",JSON.stringify(data))
     } 
   }
-  else {
+  else if ((event.data[0] == 2)) {
+    console.log(event.data[1])
     let data = JSON.parse(localStorage.getItem("övningar"));
     delete data[event.data[1]]
     localStorage.setItem("övningar",JSON.stringify(data))
+  }
+  else if (event.data[0] == 3) {
+    localStorage.setItem("övningar",event.data[1][0]); // log the contents
+    localStorage.setItem("träningspass",event.data[1][1]); // log the contents
   }
 }) 

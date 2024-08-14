@@ -15,34 +15,7 @@
       height="0px"
       style="position: fixed"
     ></iframe>
-    <div class="heading">
-      <button class="heading dropdown" id="menu-button" onclick="sidemenu()">
-        <img src="images/meny.svg" alt="meny" class="heading" />
-      </button>
-      <div id="dropdown-menu" class="dropdown">
-        <button onclick="hemMenu()" class="dropdown-button">Hem</button>
-        <button onclick="övningsMenu()" class="dropdown-button">
-          Övningar
-        </button>
-        <button
-          onclick="exporteraData()"
-          class="dropdown-button exportera-button"
-        >
-          Exportera data
-        </button>
 
-        <label for="uploadButton" class="dropdown-button importera-button"
-          >Importera data
-          <input
-            id="uploadButton"
-            type="file"
-            onchange="importeraData(event)"
-            class="importera-button"
-          />
-        </label>
-      </div>
-      <h1 class="heading">Tränings app</h1>
-    </div>
     <div name="Ny övning button" class="ny-button">
       <input
         type="text"
@@ -63,6 +36,30 @@
       class="övningar"
       style="height: calc(100vh - 120px)"
     ></div>
+    <div class="navigation-bar">
+      <button class="navigation-bar" onclick="hemMenu()">
+        <img src="images\home.png" alt="Home" class="navigation-bar" />
+      </button>
+      <button class="navigation-bar" onclick="övningsMenu()">
+        <img src="images\fitness.png" alt="Exercises" class="navigation-bar" />
+      </button>
+      <label for="uploadButton" class="navigation-bar"
+        ><img
+          src="images/import.png"
+          alt="Import data"
+          class="navigation-bar"
+        />
+        <input
+          id="uploadButton"
+          type="file"
+          onchange="importeraData(event)"
+          class="navigation-bar"
+        />
+      </label>
+      <button class="navigation-bar" onclick="exporteraData()">
+        <img src="images/export.png" alt="Export data" class="navigation-bar" />
+      </button>
+    </div>
     <script src="övningar.js"></script>
   </body>
 </html>
