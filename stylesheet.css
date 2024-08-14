@@ -3,6 +3,10 @@
   font-weight: 500;
 }
 
+body {
+  padding-top: 40px;
+}
+
 div.heading {
   position: fixed;
   background-color: #929292;
@@ -39,15 +43,16 @@ button.heading {
 }
 
 div.dropdown.opened {
-  opacity: 1;
+  display: flex;
 } 
 
 div.dropdown {
-  opacity: 0;
+  flex-direction: column;
+  display: none;
   position: fixed;
   top: 0px;
   left: 0px;
-  height: 75vh;
+  height: 130px;
   width: 175px;
   background-color: rgb(191, 191, 191);
   border-radius: 10px;
@@ -73,9 +78,9 @@ button.klar-button {
   background: none;
   border: none;
   padding: 0;
-  width: 90%;
+  width: calc(100vw - 40px);
   position: fixed;
-  top: 93%;
+  bottom: -20px;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -90,8 +95,10 @@ label.klar-button {
 
 div.ny-button {
   display: flex;
-  margin-top: 45px;
+
 }
+
+
 
 input.ny-button {
   flex-grow: 1;
@@ -121,32 +128,18 @@ div.data-div {
   align-items: flex-end;
   justify-content: space-around;
 }
-div.importera-button {
-  height: 110px;
-}
 input.importera-button {
   display: none;
 }
-img.importera-button {
-  width: 100px;
-}
 
-
-button.exportera-button {
-  background: none;
+button.dropdown-button {
   border: none;
-  height: 110px;
-}
-
-img.exportera-button {
-  width: 100px;
-}
-
-.importera-button {
-  opacity: inherit;
-}
-.exportera-button {
-  opacity: inherit;
+  background: none;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 17px;
 }
 
 
@@ -193,4 +186,25 @@ label.övining-checkbox {
 }
 input.övining-checkbox:checked + label.övining-checkbox {
   background-image: url(images/checkbox1.svg);
+}
+
+button.delete-button {
+  background: none;
+  border: none;
+  padding: 0px;
+  margin-right: 2.5px;
+}
+img.delete-button {
+  width: 40px;
+}
+
+hr {
+  background: black;
+  border: none;
+  height: 3px;
+}
+
+div.övningar {
+  overflow: auto;
+
 }

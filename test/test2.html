@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <iframe
+      src="test.html"
+      frameborder="0"
+      width="0px"
+      height="0px"
+      id="test-link"
+    ></iframe>
+    <button onclick="hej()"></button>
+
+    <script>
+      function hej() {
+        document
+          .getElementById("test-link")
+          .contentWindow.postMessage("hej", "*");
+      }
+    </script>
+  </body>
+</html>

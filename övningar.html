@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tränings app</title>
     <link rel="stylesheet" href="stylesheet.css" />
-
-    <link rel="icon" href="#" />
-    <!-- Providing a empty file as the favicon so that the browser does not give a error -->
   </head>
   <body>
+    <iframe
+      src="index.html"
+      frameborder="0"
+      id="main-screen-link"
+      width="0px"
+      height="0px"
+      style="position: fixed"
+    ></iframe>
     <div class="heading">
       <button class="heading dropdown" id="menu-button" onclick="sidemenu()">
         <img src="images/meny.svg" alt="meny" class="heading" />
@@ -19,7 +24,6 @@
         <button onclick="övningsMenu()" class="dropdown-button">
           Övningar
         </button>
-
         <button
           onclick="exporteraData()"
           class="dropdown-button exportera-button"
@@ -39,23 +43,26 @@
       </div>
       <h1 class="heading">Tränings app</h1>
     </div>
-
-    <form id="input-form">
-      <div
-        id="övningar"
-        class="övningar"
-        style="height: calc(84vh - 40px)"
-      ></div>
-    </form>
-
-    <button onclick="sparaTräningspass()" class="klar-button">
-      <div id="klar-button-div" class="klar-button">
-        <label for="klar-button-div" class="klar-button"
-          >Spara Träningspass</label
-        >
-      </div>
-    </button>
-
-    <script src="index.js"></script>
+    <div name="Ny övning button" class="ny-button">
+      <input
+        type="text"
+        id="nyÖvningInput"
+        placeholder="Ny övning"
+        class="ny-button"
+      />
+      <button
+        onclick="nyÖvning(); document.getElementById('nyÖvningInput').value = null;"
+        class="ny-button"
+      >
+        <img src="images\add.svg" alt="Lägg till ny övning" class="ny-button" />
+      </button>
+    </div>
+    <hr />
+    <div
+      id="övningar"
+      class="övningar"
+      style="height: calc(100vh - 120px)"
+    ></div>
+    <script src="övningar.js"></script>
   </body>
 </html>

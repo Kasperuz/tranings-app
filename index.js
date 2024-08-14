@@ -177,4 +177,37 @@ function hideSidemenu(dropdown,clickHandler) {
 
 }
 
+function övningsMenu() {
+  if (localStorage.getItem("övningar")) {
+  window.location.href = 'övningar.html?övningar='+JSON.stringify(Object.keys(JSON.parse(localStorage.getItem("övningar"))))
+  }
+  else {
+    window.location.href = 'övningar.html'
+  }
+}
+function hemMenu() {
+  window.location.href = 'index.html'
+}
+
 window.onload = uppdateraVikter();
+
+addEventListener("message", (event) => {
+  if (event.data[0]) {
+    if (localStorage.getItem("övningar")) {
+      let data = JSON.parse(localStorage.getItem("övningar"));
+      console.log(data)
+      data[event.data[1]] = null
+      localStorage.setItem("övningar",JSON.stringify(data))
+    }
+    else {
+      let data = {}
+      data[event.data[1]] = null
+      localStorage.setItem("övningar",JSON.stringify(data))
+    } 
+  }
+  else {
+    let data = JSON.parse(localStorage.getItem("övningar"));
+    delete data[event.data[1]]
+    localStorage.setItem("övningar",JSON.stringify(data))
+  }
+}) 
