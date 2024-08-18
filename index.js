@@ -104,7 +104,6 @@ function skrivUtÖvning(namn,vikt) {
 function uppdateraVikter() {
   taBortÖvningar()
   if (localStorage.getItem("övningar")) {
-    console.log(localStorage.getItem("övningar"))
     let data = JSON.parse(localStorage.getItem("övningar"))
     for (i = 0; i < Object.keys(data).length; i++) {
       skrivUtÖvning(Object.keys(data)[i],data[Object.keys(data)[i]])
@@ -135,8 +134,7 @@ function exporteraData() {
   else {
     träningspassTemp = JSON.parse(träningspassTemp)
   }
-  let data = [JSON.stringify([övningar,träningspassTemp])]
-  console.log([öviningarTemp,träningspassTemp])
+  let data = [JSON.stringify([öviningarTemp,träningspassTemp])]
   let file = new File(data,"träningsapp-export.json")
   const link = document.createElement('a')
   const url = URL.createObjectURL(file)
@@ -156,7 +154,6 @@ function importeraData(data) {
 
     reader.onload = function(e) {
         var contents = e.target.result; // get the file contents
-        console.log(JSON.parse(contents))
         localStorage.setItem("övningar",JSON.stringify(JSON.parse(contents)[0])); // log the contents
         localStorage.setItem("träningspass",JSON.stringify(JSON.parse(contents)[1])); // log the contents
         uppdateraVikter()
@@ -182,7 +179,6 @@ function sidemenu() {
     dropdown.classList.add("opened")
     document.addEventListener('click', handleClick);
   }
-  console.log(dropdown.classList)
   
 }
 
@@ -210,7 +206,6 @@ addEventListener("message", (event) => {
   if (event.data[0] == 1) {
     if (localStorage.getItem("övningar")) {
       let data = JSON.parse(localStorage.getItem("övningar"));
-      console.log(data)
       data[event.data[1]] = null
       localStorage.setItem("övningar",JSON.stringify(data))
     }
@@ -221,7 +216,6 @@ addEventListener("message", (event) => {
     } 
   }
   else if ((event.data[0] == 2)) {
-    console.log(event.data[1])
     let data = JSON.parse(localStorage.getItem("övningar"));
     delete data[event.data[1]]
     localStorage.setItem("övningar",JSON.stringify(data))
