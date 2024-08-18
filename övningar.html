@@ -10,14 +10,11 @@
   <body>
     <iframe
       src="index.html"
-      frameborder="0"
       id="main-screen-link"
-      width="0px"
-      height="0px"
-      style="position: fixed"
+      style="display: none"
     ></iframe>
 
-    <div name="Ny övning button" class="ny-button">
+    <div class="ny-button">
       <input
         type="text"
         id="nyÖvningInput"
@@ -28,7 +25,7 @@
         onclick="nyÖvning(); document.getElementById('nyÖvningInput').value = null;"
         class="ny-button"
       >
-        <img src="images\add.svg" alt="Lägg till ny övning" class="ny-button" />
+        <img src="images/add.svg" alt="Lägg till ny övning" class="ny-button" />
       </button>
     </div>
     <hr />
@@ -39,10 +36,10 @@
     ></div>
     <div class="navigation-bar">
       <button class="navigation-bar" onclick="hemMenu()">
-        <img src="images\home.png" alt="Home" class="navigation-bar" />
+        <img src="images/home.png" alt="Home" class="navigation-bar" />
       </button>
       <button class="navigation-bar" onclick="övningsMenu()">
-        <img src="images\fitness.png" alt="Exercises" class="navigation-bar" />
+        <img src="images/fitness.png" alt="Exercises" class="navigation-bar" />
       </button>
       <label for="uploadButton" class="navigation-bar"
         ><img
